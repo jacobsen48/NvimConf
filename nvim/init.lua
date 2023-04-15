@@ -1,4 +1,4 @@
-require("xen.setup-plugins")
+require("xen.plugins-setup")
 require("xen.core.keymaps")
 require("xen.core.options")
 require("xen.core.colorscheme")
