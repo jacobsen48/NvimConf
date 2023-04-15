@@ -5,7 +5,9 @@ My Neovim configuration!
 ### Relevant Files
 
 -[Neovim](https://neovim.io/) (Version 0.8/9 or Later) 
+
 -[Nerd Font](httsp://www.nerdfonts.com/) - I use Anonymice Nerd Font Mono 
+
 -[Ripgrep](https://github.com/BurntSushi/ripgrep) - For Telescope Fuzzy Finder
 
 ## Plugins
