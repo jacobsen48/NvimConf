@@ -4,17 +4,17 @@ My Neovim configuration!
 
 ### Relevant Files
 
--[Neovim](https://neovim.io/) (Version 0.8/9 or Later) 
+- [Neovim](https://neovim.io/) (Version 0.8/9 or Later) 
 
--[Nerd Font](httsp://www.nerdfonts.com/) - I use Anonymice Nerd Font Mono 
+- [Nerd Font](httsp://www.nerdfonts.com/) - I use Anonymice Nerd Font Mono 
 
--[Ripgrep](https://github.com/BurntSushi/ripgrep) - For Telescope Fuzzy Finder
+- [Ripgrep](https://github.com/BurntSushi/ripgrep) - For Telescope Fuzzy Finder
 
 ## Plugins
 
 #### Plugin Manager
 
--[wbthomason/packer](https://github.com/wbthomason/packer.nvim) - Popular plugin manager
+- [wbthomason/packer](https://github.com/wbthomason/packer.nvim) - Popular plugin manager
 
 #### Dependency For Other Plugins
 
