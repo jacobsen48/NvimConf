@@ -57,16 +57,6 @@ return require("packer").startup(function(use)
 	-- harpoon
 	use("ThePrimeagen/harpoon")
 
-	-- autocompletition
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-
-	-- snippets
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
-
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag") -- utile per il developing con ts, js
@@ -83,21 +73,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- managing & installing lsp servers, linters & formatters
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-
-	-- configuring lsp servers
-	use("neovim/nvim-lspconfig")
-	-- other config
-	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use("onsails/lspkind.nvim")
-
-	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jayp0521/mason-null-ls.nvim")
-
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -112,6 +87,27 @@ return require("packer").startup(function(use)
 	-- vim-fugitive (git integration)
 	use("tpope/vim-fugitive")
 
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+                pcall(vim.cmd, 'MasonUpdate')
+            end,
+        },
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+      }
+    }
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 
@@ -119,3 +115,23 @@ return require("packer").startup(function(use)
 		require("packer").sync()
 	end
 end)
+
+-- TO TRY PLUGINS
+-- use("folke/zen-mode.nvim")
+-- use("github/copilot.vim")
+-- use("eandrju/cellular-automaton.nvim")
+-- use("laytan/cloak.nvim")
+-- use("nvim-treesitter/nvim-treesitter-context");
+-- use("theprimeagen/refactoring.nvim")
+-- use("nvim-treesitter/playground")
+-- use({
+--       "folke/trouble.nvim",
+--       config = function()
+--           require("trouble").setup {
+--               icons = false,
+--               -- your configuration comes here
+--               -- or leave it empty to use the default settings
+--               -- refer to the configuration section below
+--           }
+--       end
+--   })

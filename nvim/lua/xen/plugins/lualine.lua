@@ -1,8 +1,3 @@
-local status, lualine = pcall(require, "lualine")
-if not status then
-	return
-end
-
 local lualine_monokaipro = require("lualine.themes.monokai-pro")
 
 local new_colors = {
@@ -23,7 +18,7 @@ lualine_monokaipro.command = {
 	},
 }
 
-lualine.setup({
+require('lualine').setup({
 	options = {
 		theme = lualine_monokaipro,
 	},
